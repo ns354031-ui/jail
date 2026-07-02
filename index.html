@@ -1,0 +1,152 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7 Crore Ka Sawal</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#6a11cb,#2575fc);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+padding-top:70px;
+}
+
+.marquee{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#ff0000;
+color:white;
+padding:15px 0;
+overflow:hidden;
+white-space:nowrap;
+font-size:24px;
+font-weight:bold;
+z-index:999;
+}
+
+.marquee span{
+display:inline-block;
+padding-left:100%;
+animation:move 10s linear infinite;
+}
+
+@keyframes move{
+0%{transform:translateX(0);}
+100%{transform:translateX(-100%);}
+}
+
+.container{
+background:white;
+width:360px;
+padding:25px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+animation:pop .6s;
+}
+
+@keyframes pop{
+from{transform:scale(.8);opacity:0;}
+to{transform:scale(1);opacity:1;}
+}
+
+h2{
+margin-bottom:15px;
+color:#333;
+}
+
+p{
+font-size:18px;
+margin-bottom:20px;
+}
+
+button{
+width:100%;
+padding:15px;
+margin:8px 0;
+border:none;
+border-radius:10px;
+background:#2575fc;
+color:white;
+font-size:17px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.04);
+background:#004fd6;
+}
+
+#result{
+margin-top:20px;
+font-size:20px;
+font-weight:bold;
+color:green;
+display:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="marquee">
+<span>
+💰🔥 7 CRORE KA SAWAL 🔥💰 &nbsp;&nbsp;&nbsp;
+💰🔥 7 CRORE KA SAWAL 🔥💰 &nbsp;&nbsp;&nbsp;
+💰🔥 7 CRORE KA SAWAL 🔥💰
+</span>
+</div>
+
+<div class="container">
+
+<h2>🤔 Prediction Time</h2>
+
+<p>
+Jab Bacha Jail Se Aayega Aap Video Dikhaoge Uski Behn or Us Ladke ki Jo Ghume Rhe The Dono Ek Saath?
+</p>
+
+<button onclick="showResult('😡 A. Bahut gussa ho jayega')">
+A. Bahut gussa ho jayega 😡
+</button>
+
+<button onclick="showResult('🤔 B. Pehle poori baat samjhega')">
+B. Pehle poori baat samjhega 🤔
+</button>
+
+<button onclick="showResult('📞 C. Seedha phone karega')">
+C. Seedha phone karega 📞
+</button>
+
+<button onclick="showResult('😶 D. Ignore kar dega')">
+D. Bache Ko Pehle Se Pata Hai Dono Ke Bare Mai 😶
+</button>
+
+<div id="result"></div>
+
+</div>
+
+<script>
+function showResult(answer){
+document.getElementById("result").style.display="block";
+document.getElementById("result").innerHTML=
+"✅ Aapne select kiya:<br><br>"+answer;
+}
+</script>
+
+</body>
+</html>
